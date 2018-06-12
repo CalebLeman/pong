@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title> Pong </title>
+		<title> Grumpy Pong </title>
 		<script src="https://simplycodingcourses.com/files/simply.js"></script>
 		<script>
 		function start(){
@@ -8,11 +8,44 @@
 			//Ball Object and Propertes
 		 	var Ball = new sjs.Image("Images/ball.png");
 		 	Ball.type = "ball";
+		 	Ball.setSize(50,50);
+		 	Ball.center();
+		 	Ball.friction= 0;
+            Ball.pushUp(6);
+            Ball.pushRight(3); 
+            Ball.bounce(); 
+            //Paddle 1
+            var paddle1 = new sjs.Image("Images/trig.png");
+            paddle1.type = "paddle";
+            paddle1.centerH();
+            paddle1.setSize(130,20)
+            //Paddle 2
+            var paddle2 = new sjs.Image("Images/trigg.png") 
+            paddle2.type = "paddle";
+            paddle2.center().bottom();
+            paddle2.setSize(130,20)
+            
+
+            sjs.keyDown(LEFT_KEY, function(){
+
+paddle2.pushLeft();
+paddle1.pushLeft();
+}); 
+            sjs.keyDown(RIGHT_KEY, function(){
+
+paddle2.pushRight();
+paddle1.pushRight();
+});
+sjs.onHit("ball","paddle", function(ball,paddle){
+sjs.bounceOff(ball,paddle); 
+}); 
+
+
 		} //end start
 		</script>
 	</head>
 	<body onload="start()">
-		<h1> Pong </h1>
+		<h1> Grumpy Pong </h1>
 
 		<div id="target" style="margin:auto;background:#ff4d4d;"></div>
 	</body>
