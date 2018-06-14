@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Game Over </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+
+var background = new sjs.Image("Images/aaa.jpg");
+			
+			background.setSize(sjs.getWidth(), sjs.getHeight());	
+
+
+
+var gameover_text = new sjs.Text("You Lost. Good.",28,"blue"); 
+var restartBtn = new sjs.Button("Don't Play Again.", function(){window.location = "pong.html";
+});
+
+restartBtn.center(); 
+
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> </h1>
+
+<body onload="start()" style="background-image: url(Images/rt.jpg);">
+
+
+
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html>

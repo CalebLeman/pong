@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///E:/Caleb's%20Code/Game%20Design/Pong/gameover.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title> Game Over </title>
+		<script src="./Game Over_files/simply.js.download"></script>
+	<script>
+		function start(){
+		sjs.open();
+		var gameover_text = new sjs.Text("You Lose. Good.",28,"purple");
+
+		var restartBtn = new sjs.Button("Don't Play Again", function(){
+		  window.location = "pong.html";
+		});
+
+		restartBtn.center(); 
+	} //end start
+
+	
+	</script>
+
+	</head>
+	<body onload="start()">
+
+		<div id="target" style="margin: auto; background-image: url(&quot;Images/bill.jpg&quot;); background-position: center center; background-repeat: no-repeat; border: 2px solid black; width: 500px; height: 400px; position: relative; overflow: hidden;"><span style="position: absolute; font-size: 28px; color: purple; font-family: Arial; display: inline; left: 0px; top: 0px;">You Lose. Good.</span><button style="position: absolute; font-family: Arial; font-size: 18px; color: black; display: inline; top: 187px; left: 176px;">Don't Play Again</button></div>
+
+		
+</body></html>
